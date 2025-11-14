@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build:all",
+  "outputDirectory": "client/dist",
+  "framework": "react",
+  "env": [
+    "DATABASE_URL",
+    "JWT_SECRET",
+    "GOOGLE_API_KEY",
+    "GROQ_API_KEY",
+    "LIVEBLOCKS_SECRET_KEY",
+    "NODE_ENV"
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "api/index.js" },
+    { "src": "/(.*)", "dest": "client/dist/index.html" }
+  ],
+  "functions": {
+    "api/index.js": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache" }
+      ]
+    }
+  ]
+}
