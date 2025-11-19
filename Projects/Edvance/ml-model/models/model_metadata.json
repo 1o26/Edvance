@@ -1,0 +1,52 @@
+{
+  "model_type": "RandomForestRegressor",
+  "training_date": "2025-11-15T00:19:58.331477",
+  "metrics": {
+    "mse": 0.05444542793699526,
+    "rmse": 0.2333354408078534,
+    "mae": 0.182639737702222,
+    "r2": 0.850184062392539,
+    "cv_mean": 0.8381611178527809,
+    "cv_std": 0.030090646173692448
+  },
+  "feature_importance": {
+    "feature": {
+      "1": "num_materials",
+      "5": "duration",
+      "6": "content_words",
+      "2": "num_activities",
+      "0": "num_objectives",
+      "4": "has_differentiation",
+      "3": "num_assessments"
+    },
+    "importance": {
+      "1": 0.8186847256578442,
+      "5": 0.17973345226603785,
+      "6": 0.001581822076118059,
+      "2": 0.0,
+      "0": 0.0,
+      "4": 0.0,
+      "3": 0.0
+    }
+  },
+  "hyperparameters": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": 15,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 2,
+    "min_samples_split": 5,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 100,
+    "n_jobs": -1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  }
+}
